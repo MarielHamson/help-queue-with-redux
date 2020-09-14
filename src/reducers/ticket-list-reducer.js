@@ -1,3 +1,19 @@
 export default (state = {}, action) => {
-  return state;
+  const { names, location, issue, id } = action;
+  switch (action.type) {
+    case 'ADD_TICKET':
+      return Object.assign({}, state, {
+        [id]: {
+          names: names,
+          location: location,
+          issue: issue,
+          id: id
+        }
+      });
+    default: 
+      return state;
+    }
 };
+
+
+//state = { 1 : {"name" : "Kate", "course": "React", "id" : 1}, 2: {"name":"Evgeniya", "course":"React", "id": 2}};
