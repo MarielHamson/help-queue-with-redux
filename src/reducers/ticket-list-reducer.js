@@ -10,14 +10,13 @@ export default (state = {}, action) => {
           id: id
         }
       });
-      case 'DELETE_TICKET': 
-        const newState = {...state };
-        delete newState[id];
-        return newState;
+    case 'DELETE_TICKET': 
+      const newState = {...state };
+      delete newState[id];
+      return newState;
     default: 
       return state;
     }
 };
 
-
-//state = { 1 : {"name" : "Kate", "course": "React", "id" : 1}, 2: {"name":"Evgeniya", "course":"React", "id": 2}};
+// export default (state = {}, action = {type: 'ADD_TICKET', names: 'Kate', location: 'location', issue: 'issue', id: 'id'});
